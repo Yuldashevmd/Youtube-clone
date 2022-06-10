@@ -1,5 +1,5 @@
 import React, { useContext,useState } from "react";
-import { FilterBtns, Micro, RightMenu, SearchBtn, SearchInput, Wraper,Parent, LogIn } from "./style";
+import { FilterBtns, Micro, RightMenu, SearchBtn, SearchInput, Wraper, LogIn } from "./style";
 import { ReactComponent as Keyboard } from "../../assets/keyboard-svgrepo-com.svg";
 import { ReactComponent as SearchSvg } from "../../assets/search-svgrepo-com.svg";
 import { ReactComponent as Microphone } from "../../assets/microphone-svgrepo-com.svg";
@@ -10,13 +10,13 @@ import {g8Info} from "../../context";
 import { data } from "../../mock-data";
 
 const Header = () => {
-  const {dataItem,setDataItem}=useContext(g8Info);
+  const {setDataItem}=useContext(g8Info);
   const [title,setTitle]=useState()
   const g8Change =(e)=>{
     setTitle(e.target.value)
   }
   const onPress =(e)=>{
-    if(e.key =='Enter'){
+    if(e.key ==='Enter'){
       const newData=data.filter(item=>(
         item.title.toLocaleLowerCase().includes(title.toLocaleLowerCase())
       ))

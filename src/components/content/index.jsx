@@ -1,9 +1,9 @@
-import React, { useContext,useState } from "react";
+import React, { useContext } from "react";
 import { Container, Descrip } from "./style";
 import { g8Info } from "../../context";
 
 const Content = () => {
-  const  {dataItem, setDataItem } = useContext(g8Info);
+  const  {dataItem } = useContext(g8Info);
   
   return (
     <Container>
